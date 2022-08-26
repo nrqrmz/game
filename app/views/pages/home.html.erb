@@ -3,3 +3,12 @@
   <p class="mt-5">Please login</p>
   <p class="mt-5">It is free</p>
 </div>
+
+<div class="container col-6 my-5 text-center">
+  <p>
+    <%= current_user.email if user_signed_in? %>
+  </p>
+  <p>
+    Balance: <%= current_user.balance if user_signed_in? %>
+  </p>
+</div>
